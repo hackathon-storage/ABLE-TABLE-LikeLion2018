@@ -1,5 +1,12 @@
 # 2018 LikeLion Central Hackathon
 
+### Git Branch
+* master : 완성 후 이전할 branch
+* develop : 개발하는 동안 merge할 용도의 branch
+* sjy : 서지용 개발 branch
+* lsy : 이서영 개발 branch
+* jmk : 조민국 개발 branch
+
 
 ### Author
 * 서지용
