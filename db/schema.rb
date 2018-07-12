@@ -10,7 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180710150526) do
+ActiveRecord::Schema.define(version: 20180712101757) do
+
+  create_table "stations", force: :cascade do |t|
+    t.string   "station_name"
+    t.float    "station_position_x"
+    t.float    "station_position_y"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "stores", force: :cascade do |t|
+    t.string  "store_name"
+    t.string  "store_img1"
+    t.string  "store_img2"
+    t.string  "store_img3"
+    t.string  "store_img4"
+    t.string  "store_information"
+    t.integer "store_contact"
+    t.integer "store_group"
+    t.integer "store_seat_count"
+    t.integer "store_seat_total"
+    t.integer "user_id"
+    t.integer "station_id"
+    t.string  "store_address"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
