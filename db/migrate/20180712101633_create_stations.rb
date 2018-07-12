@@ -6,7 +6,7 @@ class CreateStations < ActiveRecord::Migration[5.0]
       t.float :station_position_x
       t.float :station_position_y
 
-      t.timestamps
+      t.timestamps null:false
     end
   end
 end

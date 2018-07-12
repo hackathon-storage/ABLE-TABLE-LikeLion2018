@@ -21,19 +21,21 @@ ActiveRecord::Schema.define(version: 20180712101757) do
   end
 
   create_table "stores", force: :cascade do |t|
-    t.string  "store_name"
-    t.string  "store_img1"
-    t.string  "store_img2"
-    t.string  "store_img3"
-    t.string  "store_img4"
-    t.string  "store_information"
-    t.integer "store_contact"
-    t.integer "store_group"
-    t.integer "store_seat_count"
-    t.integer "store_seat_total"
-    t.integer "user_id"
-    t.integer "station_id"
-    t.string  "store_address"
+    t.integer  "user_id"
+    t.integer  "station_id"
+    t.string   "store_name"
+    t.string   "store_menu_img1"
+    t.string   "store_menu_img2"
+    t.string   "store_menu_img3"
+    t.string   "store_img"
+    t.string   "store_information"
+    t.integer  "store_contact"
+    t.integer  "store_group"
+    t.integer  "store_seat_count"
+    t.integer  "store_seat_total"
+    t.string   "store_address"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "users", force: :cascade do |t|
