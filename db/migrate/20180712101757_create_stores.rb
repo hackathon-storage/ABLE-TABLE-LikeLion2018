@@ -15,6 +15,8 @@ class CreateStores < ActiveRecord::Migration[5.0]
       t.integer :user_id
       t.integer :station_id
       t.string :store_address
+      
+      t.timestamps null: false
     end
   end
 end
