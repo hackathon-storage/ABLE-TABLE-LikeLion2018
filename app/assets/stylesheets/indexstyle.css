@@ -1,0 +1,245 @@
+@import url('http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+
+body {
+    margin: 0px;
+    font-family: 'spoqa-han-sans', sans-serif;
+}
+
+nav {
+    margin-top: 70px;
+}
+
+.container-fluid {
+    width: 840px;
+    margin: auto;
+}
+
+nav:after {
+        content: "";
+        display: block;
+        width: 960px;
+        border-bottom: 1px solid #bcbcbc;
+        margin: 20px auto 0px auto;
+}
+
+
+/*------------index page------------*/
+/* navigator */
+
+nav .vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.category {
+    font-size: 13pt;
+    
+    display: inline;
+    float: right;
+}
+
+.logo {
+    font-size: 36pt;
+    font-weight: bold;
+    
+    display: inline;
+}
+
+.first-menu, .second-menu, .third-menu {
+    float: right;
+    display: inline;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* header */
+
+
+header .background {
+    height: 450px;
+    background-image: url("header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.first-header {
+    font-size: 24px;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    
+    padding-top: 120px;
+}
+
+.second-header {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    
+    margin-bottom: 40px;
+}
+
+header .row .vertical-align .search {
+    display: flex;
+    align-items: center;
+}
+
+.search .col-xs-4 {
+    margin: auto;
+    text-align: center !important;
+}
+
+.search .col-xs-6 .form-control {
+    text-align: center !important;
+}
+
+.btn-link {
+    margin: auto;
+    
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    border: 0 !important; 
+    outline: 0 !important;
+    text-decoration: none !important;
+}
+
+
+/* service introduce */
+
+.service-introduce:after {
+        content: "";
+        display: block;
+        width: 960px;
+        border-bottom: 1px solid #bcbcbc;
+        margin: 20px auto 0px auto;
+}
+
+.introduce-title {
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.first-title {
+    font-weight: lighter;
+}
+
+.second-title {
+    font-weight: bold;
+}
+
+.second-title:after {
+        content: "";
+        display: block;
+        width: 50px;
+        border-bottom: 2px solid black;
+        margin: 20px auto 40px 0px;
+}
+
+.introduce-content {
+    font-size: 18px;
+    
+    margin-bottom: 50px;
+}
+
+/* team introduce */
+
+.team-introduce:after {
+        content: "";
+        display: block;
+        width: 960px;
+        border-bottom: 1px solid #bcbcbc;
+        margin: 50px auto 0px auto;
+}
+
+.team-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.first-team-title {
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.second-team-title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.second-team-title:after {
+        content: "";
+        display: block;
+        width: 50px;
+        border-bottom: 2px solid black;
+        margin: 20px auto 40px auto;
+}
+
+.first-member, .second-member, .third-member {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    
+    background-color: #bcbcbc;
+    margin: auto;
+}
+
+.member-name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+.member-name p {
+    margin: 0px;
+}
+
+.sy:after {
+        content: "";
+        display: block;
+        width: 50px;
+        border-bottom: 2px solid black;
+        margin: 5px auto 40px auto;
+}
+
+.jy:after {
+        content: "";
+        display: block;
+        width: 50px;
+        border-bottom: 2px solid black;
+        margin: 5px auto 40px auto;
+}
+
+.mg:after {
+        content: "";
+        display: block;
+        width: 50px;
+        border-bottom: 2px solid black;
+        margin: 5px auto 40px auto;
+}
+
+/* footer */
+
+footer .vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0px;
+}
