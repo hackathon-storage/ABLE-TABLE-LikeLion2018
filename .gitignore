@@ -17,4 +17,5 @@
 /tmp
 
 public/
-db/
+*.sqlite3
+schema.rb
