@@ -1,0 +1,141 @@
+@import url('http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+
+body {
+    margin: 0px;
+    font-family: 'spoqa-han-sans', sans-serif;
+}
+
+nav {
+    margin-top: 70px;
+}
+
+.container-fluid {
+    width: 840px;
+    margin: auto;
+}
+
+nav:after {
+        content: "";
+        display: block;
+        width: 960px;
+        border-bottom: 1px solid #bcbcbc;
+        margin: 20px auto 0px auto;
+}
+
+
+/*------------index page------------*/
+/* navigator */
+
+nav .vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.category {
+    font-size: 13pt;
+    
+    display: inline;
+    float: right;
+}
+
+.logo {
+    font-size: 36pt;
+    font-weight: bold;
+    
+    display: inline;
+}
+
+.first-menu, .second-menu, .third-menu {
+    float: right;
+    display: inline;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* header > map-api */
+
+header .map-api {
+    height: 450px;
+    background-image: url("map-api.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* search result */
+
+.search-result:after {
+        content: "";
+        display: block;
+        width: 960px;
+        border-bottom: 1px solid #bcbcbc;
+        margin: 50px auto 0px auto;
+}
+
+.result-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.station-title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.station-title:after {
+        content: "";
+        display: block;
+        width: 50px;
+        border-bottom: 2px solid black;
+        margin: 20px auto 40px auto;
+}
+
+.result-pick {
+    width: 220px;
+    height: 360px;
+    
+    background-color: #bcbcbc;
+    margin: auto;
+}
+
+.restaurant-name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+.restaurant-name {
+    margin: 0px;
+}
+
+.restaurant:after {
+        content: "";
+        display: block;
+        width: 50px;
+        border-bottom: 2px solid black;
+        margin: 5px auto 40px auto;
+}
+
+/* footer */
+
+footer .vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0px;
+}
