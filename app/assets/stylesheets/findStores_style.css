@@ -61,9 +61,9 @@ nav a {
 
 header .map-api {
     height: 450px;
-    background-image: url("map-api.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    /*background-image: url("map-api.jpg");*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
 }
 
 /* search result */
