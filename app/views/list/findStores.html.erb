@@ -1,70 +1,64 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>search_result page</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/findStores_style.css">
-</head>
-<body>
-  <nav>
-    <div class="container-fluid">
-      <div class="row vertical-align">
-        <div class="col-xs-3 logo">
-          ABLETABLE
-        </div>
-        <div class="col-xs-4"></div>
-        <div class="col-xs-5 category">
-          <a href="#" class="first-menu">log in</a>
-          <a href="#" class="second-menu">contact us</a>
-          <a href="#" class="third-menu">menu</a>
-        </div>
+<link rel="stylesheet" type="text/css" href="/assets/findStores_style.css">
+
+<nav>
+  <div class="container-fluid">
+    <div class="row vertical-align">
+      <div class="col-xs-3 logo">
+        ABLETABLE
       </div>
-    </div>
-  </nav>
-  <header>
-    <div class="container-fluid">
-      <div class="row map-api">
-        <!-- map api 추가해야 합니다 -->
-        map api
+      <div class="col-xs-4"></div>
+      <div class="col-xs-5 category">
+        <a href="#" class="first-menu">log in</a>
+        <a href="#" class="second-menu">contact us</a>
+        <a href="#" class="third-menu">menu</a>
       </div>
-    </div>
-  </header>
-  <div class="search-result">
-    <div class="container-fluid">
-      <div class="row vertical-align">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4 result-title">
-          <!-- 검색된 역이름 가져와야 합니당 -->
-          <div class="station-title">온수역</div>
-        </div>
-        <div class="col-xs-4"></div>
-      </div>
-      <!-- each문이 들어가야 합니당 -->
-      <% @selectedstores.each do |s| %>
-      <div class="row vertical-align">
-        <div class="col-xs-4">
-          <div class="result-pick"></div>
-        </div>
-      </div>
-      <div class="row vertical-align restaurant-name">
-        <div class="col-xs-4 restaurant">
-          <a href="#매장상세정보"><%= s.store_name %></a>
-        </div>
-      </div>
-      <% end %>
-      <!-- 여만큼이요 -->
     </div>
   </div>
-  <footer>
-    <div class="container-fluid">
-      <div class="row vertical-align">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
-          <p>Copyright &copy; 2018 Likelion at SKHU</p>
-        </div>
-        <div class="col-xs-2"></div>
-      </div>
+</nav>
+<header>
+  <div class="container-fluid">
+    <div class="row map-api">
+      <!-- map api 추가해야 합니다 -->
+      map api
     </div>
-  </footer>
-</body>
-</html>
+  </div>
+</header>
+<div class="search-result">
+  <div class="container-fluid">
+    <div class="row vertical-align">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4 result-title">
+        <!-- 검색된 역이름 가져와야 합니당 -->
+        <div class="station-title">온수역</div>
+      </div>
+      <div class="col-xs-4"></div>
+    </div>
+    <!-- each문이 들어가야 합니당 -->
+    <div class="row vertical-align">
+	    <% @stores.each do |s| %>
+	      <div class="col-xs-4">
+    	    <div class="one-restaurant">
+    	        <div class="result-pick"></div>
+    	    </div>
+    	    <div class="row vertical-align restaurant-name">
+    	      <div class="col-xs-4 restaurant">
+    	        <a href="/home/restaurant_info"><%= s.store_name %></p>
+    	      </div>
+    	    </div>
+    	   </div>
+      <% end %>
+    </div>
+    <!-- 여만큼이요 -->
+  </div>
+</div>
+<footer>
+  <div class="container-fluid">
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-8">
+        <p>Copyright &copy; 2018 Likelion at SKHU</p>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+  </div>
+</footer>
