@@ -1,8 +1,8 @@
-@import url('http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
 body {
     margin: 0px;
-    font-family: 'spoqa-han-sans', sans-serif;
+    font-family: 'Jeju Gothic', sans-serif;
 }
 
 nav {

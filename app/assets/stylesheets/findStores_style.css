@@ -1,8 +1,8 @@
-@import url('http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
 body {
     margin: 0px;
-    font-family: 'spoqa-han-sans', sans-serif;
+    font-family: 'Jeju Gothic', sans-serif;
 }
 
 nav {
@@ -61,9 +61,9 @@ nav a {
 
 header .map-api {
     height: 450px;
-    background-image: url("map-api.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    /*background-image: url("map-api.jpg");*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
 }
 
 /* search result */
