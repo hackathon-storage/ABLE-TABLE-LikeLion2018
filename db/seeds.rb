@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.create(email: 'admin@admin', password: '111111', authorization: '0')
 
 Station.create(station_name: '역곡역',station_position_x: 37.485156,station_position_y: 126.811622)
 Station.create(station_name: '온수역', station_position_x: 37.4921505, station_position_y: 126.8236345)
