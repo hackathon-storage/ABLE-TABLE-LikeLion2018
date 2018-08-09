@@ -14,4 +14,9 @@ class ListController < ApplicationController
     # @selectedstores = Store.where("station_name like ?", @station[0].station_name)
   end
   
+  def findStoreInfo
+  end
+  
+  def storeMyPage
+  end
 end

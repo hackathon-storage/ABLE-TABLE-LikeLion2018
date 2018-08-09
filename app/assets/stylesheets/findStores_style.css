@@ -110,11 +110,7 @@ header .map-api {
     margin-top: 20px;
 }
 
-.restaurant-name {
-    margin: 0px;
-}
-
-.restaurant:after {
+.restaurant-name:after {
         content: "";
         display: block;
         width: 50px;

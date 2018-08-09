@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
   get '/list/findOneStation'
   get '/list/findStores'
-  
+  get '/list/findStoreInfo'
+  get '/list/storeMyPage'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
