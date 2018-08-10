@@ -1,0 +1,21 @@
+<h1>Mypage수정하는 페이지입니다~</h1><br>
+
+<form action = '/list/storeMypageUpdate' method='post' enctype='multipart/form-data'>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <p>가게이름 : <input type='text' name='storeName' value = <%= @store.store_name %> /></p>
+  <p>가게 대표사진 : <input type='file' name='storeImg' accept="image/*" value =<%= @store.store_menu_img1%> /></p>
+  <p>메뉴사진 1 : <input type='file' name='storeMenuImg1' accept="image/*" value =<%= @store.store_menu_img1%>  /></p>
+  <p>메뉴사진 2 : <input type='file' name='storeMenuImg2' accept="image/*" value =<%= @store.store_menu_img2%>  /></p>
+  <p>메뉴사진 3 : <input type='file' name='storeMenuImg3' accept="image/*" value =<%= @store.store_menu_img3%> /></p>
+  <p>가게 설명 : <input type='text' name='storeInformation' value=<%= @store.store_information %> /></p>
+  <p>가게 전화번호 : <input type='text' name='storeContact' value=<%= @store.store_contact %> /></p>
+  <p>단체석 보유수 : <input type='text' name='storeGroup' value=<%= @store.store_group %> /></p>
+  <p>가게 주소 : <input type='text' name='storeAddress' value=<%= @store.store_address %> /></p>
+  <select name='storeStation'>
+    <% @stations.each do  |station|%>
+      <option value= <%= station.id %> > <%= station.station_name %> </option>
+    <%end%>  
+  </select>
+
+  <p><input type='submit' value='수정완료' /></p>
+</form>

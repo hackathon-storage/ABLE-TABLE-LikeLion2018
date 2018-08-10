@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   devise_for :users
   get '/list/findOneStation'
   get '/list/findStores'
-  
+  get '/list/storeApply'
+  post '/list/storeCreate'
+  get '/list/storeMypage'
+  get '/list/storeMypageEdit'
+  post '/list/storeMypageUpdate'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
