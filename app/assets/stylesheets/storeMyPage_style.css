@@ -75,6 +75,7 @@ nav a {
 }
 
 /* store-info */
+
 .btn-edit {
     margin: auto;
     
@@ -90,10 +91,6 @@ nav a {
     margin-top: 20px;
     margin-bottom: 30px;
     text-align: center !important;
-}
-
-.store-info input {
-    margin-top: 10px;
 }
 
 .store-info:after {

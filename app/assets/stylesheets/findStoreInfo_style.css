@@ -70,7 +70,6 @@ nav a {
 
 
 .restaurant-title {
-    color: #FF9EA1;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
@@ -84,7 +83,7 @@ nav a {
         content: "";
         display: block;
         width: 60px;
-        border-bottom: 5px solid #FF9EA1;
+        border-bottom: 5px solid #333;
         margin: 60px 0px 50px auto;
         
         padding: 0;
@@ -99,6 +98,7 @@ nav a {
 }*/
 
 .detail-introduce {
+  color: #FF9EA1;
   margin-top: 50px;
   font-size :18px;
   font-weight: lighter;
@@ -406,15 +406,46 @@ nav a {
 }
 
 .first-info {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    
-    background-color: #AEE6AB;
-    margin: auto;
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  
+  background-color: #AEE6AB;
+  margin: auto;
+}
+
+.first-info .col-xs-4{
+  text-align: center;
+}
+
+.remain-seats {
+  font-size: 36px;
+  font-weight: bold;
+  
+  position: relative;
+  right: -40px;
+  bottom: -50px;
+}
+
+.partition {
+  font-size: 64px;
+  font-weight: lighter;
+  
+  position: relative;
+  bottom: -70px;
+}
+
+.total-seats {
+  font-size: 36px;
+  font-weight: bold;
+  position: relative;
+  left: -40px;
+  bottom: -130px;
 }
 
 .second-info {
+  text-align: center;
     width: 220px;
     height: 220px;
     border-radius: 50%;
@@ -423,13 +454,44 @@ nav a {
     margin: auto;
 }
 
+.second-info .col-xs-4 {
+  padding: 0;
+}
+
+.chair {
+  margin-top: 70px;
+  margin-left: 30px;
+}
+
+.multiply {
+  margin-top: 90px;
+  font-size: 36px;
+  font-weight: bold;
+  width: 30px;
+}
+
+.group-size {
+  margin-top: 90px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
 .third-info {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  
     width: 220px;
     height: 220px;
     border-radius: 50%;
     
     background-color: #9CC8DB;
     margin: auto;
+}
+
+.phone-number{
+  position: relative;
+  bottom: -95px;
 }
 
 .first-info-title, .second-info-title, .third-info-title {
