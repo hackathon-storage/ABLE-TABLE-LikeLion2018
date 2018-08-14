@@ -1,24 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/assets/findOneStation_style.css">
 
-<nav>
-  <div class="container-fluid">
-    <div class="row vertical-align">
-      <div class="col-xs-3 logo">
-        ABLETABLE
-      </div>
-      <div class="col-xs-4"></div>
-      <div class="col-xs-5 category">
-        <% if current_user == nil %>
-          <a href="/users/sign_in" class="first-menu">login</a>
-        <% else %>
-          <a href="/users/sign_out" class="first-menu">logout</a>  
-        <% end %>
-        <a href="/list/storeMypageEdit" class="second-menu">mypage</a>
-        <a href="/" class="third-menu">home</a>
-      </div>
-    </div>
-  </div>
-</nav>
 <header>
   <div class="container-fluid">
     <div class="row vertical-align background">
@@ -107,14 +88,3 @@
     </div>
   </div>
 </div>
-<footer>
-  <div class="container-fluid">
-    <div class="row vertical-align">
-      <div class="col-xs-2"></div>
-      <div class="col-xs-8">
-        <p>Copyright &copy; 2018 Likelion at SKHU</p>
-      </div>
-      <div class="col-xs-2"></div>
-    </div>
-  </div>
-</footer>

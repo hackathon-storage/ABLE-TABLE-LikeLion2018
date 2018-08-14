@@ -2,7 +2,9 @@ class ListController < ApplicationController
 
   # 첫 페이지
   def findOneStation
-    
+    if current_user != nil && Store.find_by(:user_id => current_user.id) == nil
+      redirect_to "/list/storeApply"
+    end
   end
   
   # 역 검색 결과

@@ -16,8 +16,37 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<%= yield %>
-
+  <nav>
+    <div class="container-fluid">
+      <div class="row vertical-align">
+        <div class="col-xs-3 logo">
+          <a href="/">ABLETABLE</a>
+        </div>
+        <div class="col-xs-4"></div>
+        <div class="col-xs-5 category">
+          <% if current_user == nil %>
+            <a href="/users/sign_in" class="first-menu">login</a>
+          <% else %>
+            <a href="/users/sign_out" class="first-menu">logout</a>  
+          <% end %>
+          <a href="/list/storeMypageEdit" class="second-menu">mypage</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <%= yield %>
+  
+  <footer>
+    <div class="container-fluid">
+      <div class="row vertical-align">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+          <p>Copyright &copy; 2018 Likelion at SKHU</p>
+        </div>
+        <div class="col-xs-2"></div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,21 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/findStores_style.css">
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=fwwqGRNuNJINPbLP6n62&submodules=geocoder"></script>
 
-<nav>
-  <div class="container-fluid">
-    <div class="row vertical-align">
-      <div class="col-xs-3 logo">
-        ABLETABLE
-      </div>
-      <div class="col-xs-4"></div>
-      <div class="col-xs-5 category">
-        <a href="#" class="first-menu">log in</a>
-        <a href="#" class="second-menu">contact us</a>
-        <a href="#" class="third-menu">menu</a>
-      </div>
-    </div>
-  </div>
-</nav>
 <header>
   <div class="container-fluid">
     <div class="row map-api">
@@ -23,51 +8,49 @@
       <div id="map" style="width:100%; height:400px; margin-top: 20px;"></div>
       <script>
         var map = new naver.maps.Map('map', {
-          // 역 좌표 (지도의 중심)
           center: new naver.maps.LatLng(<%= @station.station_position_x %>, <%= @station.station_position_y %>),
           zoom: 10
         });
         
-        // 도로명 주소나 지번 주소만 가능 (건물명 불가!!!!)
         var myaddress = [];
+        var store_names = [];
         <% @stores.each do |s| %>
           myaddress.push('<%= s.store_address %>');
+          store_names.push('<%= s.store_name %>');
         <% end %>
         
         for (var i = 0; i < myaddress.length; ++i) {
-            
-          naver.maps.Service.geocode({address: myaddress[i]}, function(status, response) {
-            if (status !== naver.maps.Service.Status.OK) {
+          (function(i) {
+            naver.maps.Service.geocode({address: myaddress[i]}, function(status, response) {
+              if (status !== naver.maps.Service.Status.OK) {
                 return alert(myaddress + '의 검색 결과가 없거나 기타 네트워크 에러');
-            }
-            var result = response.result;
-            // 검색 결과 갯수: result.total
-            // 첫번째 결과 결과 주소: result.items[0].address
-            
-            for (var i = 0; i < myaddress.length; ++i) {
-              var markerAddress = new naver.maps.Point(result.items[i].point.x, result.items[i].point.y);
+              }
+              var result = response.result;
+              // 검색 결과 갯수: result.total
+              // 첫번째 결과 결과 주소: result.items[0].address
+              // console.log(i, myaddress[i], result);
+        
+              var markerAddress = new naver.maps.Point(result.items[0].point.x, result.items[0].point.y);
               var marker = new naver.maps.Marker({
-                  position: markerAddress,
-                  map: map
+                position: markerAddress,
+                map: map
               });
-              
+            
               // 마크 클릭시 인포윈도우 오픈
               var infowindow = new naver.maps.InfoWindow({
-                  content: '<h4> [네이버 개발자센터]</h4><a href="https://developers.naver.com" target="_blank"><img src="https://developers.naver.com/inc/devcenter/images/nd_img.png"></a>'
+                content: '<h4>' + store_names[i] + '</h4>'
               });
-              
+            
               // 마커 클릭 이벤트 처리
               naver.maps.Event.addListener(marker, "click", function(e) {
                 if (infowindow.getMap()) {
-                    infowindow.close();
+                  infowindow.close();
                 } else {
-                    infowindow.open(map, marker);
+                  infowindow.open(map, marker);
                 }
               });
-            }
-            
-          });
-          
+            });
+          })(i);
         }
       </script>
     </div>
@@ -97,14 +80,3 @@
     <!-- 여만큼이요 -->
   </div>
 </div>
-<footer>
-  <div class="container-fluid">
-    <div class="row vertical-align">
-      <div class="col-xs-2"></div>
-      <div class="col-xs-8">
-        <p>Copyright &copy; 2018 Likelion at SKHU</p>
-      </div>
-      <div class="col-xs-2"></div>
-    </div>
-  </div>
-</footer>

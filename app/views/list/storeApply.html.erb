@@ -1,3 +1,93 @@
+<link rel="stylesheet" type="text/css" href="/assets/storeMyPage_style.css">
+
+<header>
+  <div class="container-fluid">
+    <div class="row vertical-align">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4">
+        <div class="mypage">Apply</div>
+      </div>
+      <div class="col-xs-4"></div>
+  </div>
+</header>
+<form action = '/list/storeMypageUpdate' method='post' enctype='multipart/form-data'>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<div class="container-fluid">
+  <div class="store-info">
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-2 store-name">매장 이름</div>
+      <div class="col-xs-6">
+        <input type='text' name='storeName' placeholder="매장 이름을 등록해주세요" />
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-2 store-infomation">매장 소개</div>
+      <div class="col-xs-6">
+        <input type='text' name='storeInformation' placeholder="간단한 매장 한 줄 소개를 입력해주세요" />
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-2 store-address">매장 주소</div>
+      <div class="col-xs-6">
+        <input type='text' name='storeAddress' placeholder="정확한 매장 주소를 입력해주세요"/>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-2 store-img">대표 이미지</div>
+      <div class="col-xs-6">
+        <input type='file' name='storeImg' accept="image/*" placeholder="검색 페이지의 대표 썸네일 이미지" />
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-2 store-menu">매장 내부<br>메뉴판 이미지</div>
+      <div class="col-xs-6">
+        <input type='file' name='storeMenuImg1' accept="image/*" placeholder="매장 내부, 메뉴판 이미지" />
+        <input type='file' name='storeMenuImg2' accept="image/*" placeholder="매장 내부, 메뉴판 이미지" />
+        <input type='file' name='storeMenuImg3' accept="image/*" placeholder="매장 내부, 메뉴판 이미지" />
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-2 store-group">단체석 규모</div>
+      <div class="col-xs-6">
+        <input type='text' name='storeGroup' /></p>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-2 store-contact">매장 전화번호</div>
+      <div class="col-xs-6">
+        <input type='text' name='storeContact' />
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    <select name='storeStation'>
+    <% @stations.each do  |station|%>
+      <option value= <%= station.id %> > <%= station.station_name %> </option>
+    <%end%>  
+    </select>
+  <div class="row vertical-align">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4">
+        <button type="submit" class="btn btn-edit">등록하기</button>
+      </div>
+      <div class="col-xs-4"></div>
+    </div>
+  </div>
+</div>
+</form>
+<!--
 <form action = '/list/storeCreate' method='post' enctype='multipart/form-data'>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <p>가게이름 : <input type='text' name='storeName' /></p>
@@ -19,4 +109,4 @@
 
   <p><input type='submit' value='가게등록' /></p>
 </form>
-
+-->
