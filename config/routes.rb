@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
-
   
   devise_for :users
-  get '/list/findOneStation'
-  get '/list/findStores'
-  get '/list/storeApply'
-  post '/list/storeCreate'
-  get '/list/storeMypage'
-  get '/list/storeMypageEdit'
-  post '/list/storeMypageUpdate'
+  root 'list#findOneStation'    # 첫 페이지
+  get 'list/findOneStation'     # 첫 페이지 get
+  
+  get 'list/findStores'         # 역 검색 결과 뷰 get
+  
+  get 'list/storeApply'         # 매장 등록 get
+  post 'list/storeCreate'       # 매장 등록 post
+  
+  get 'list/storeMypageEdit'    # 등록된 매장 수정 get
+  post 'list/storeMypageUpdate' # 등록된 매장 수정 post
+  
+  get 'list/findStoreInfo/:store_id' => 'list#findStoreInfo'      # 해당 매장 정보 조회 get
   
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -10,7 +10,7 @@ class CreateStores < ActiveRecord::Migration[5.0]
       t.string :store_menu_img3
       t.string :store_img
       t.string :store_information
-      t.integer :store_contact
+      t.string :store_contact
       t.integer :store_group
       t.integer :store_seat_count
       t.integer :store_seat_total

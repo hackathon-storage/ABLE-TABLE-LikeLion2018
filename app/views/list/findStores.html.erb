@@ -24,7 +24,7 @@
       <script>
         var map = new naver.maps.Map('map', {
           // 역 좌표 (지도의 중심)
-          center: new naver.maps.LatLng(<%= @station[0].station_position_x %>, <%= @station[0].station_position_y %>),
+          center: new naver.maps.LatLng(<%= @station.station_position_x %>, <%= @station.station_position_y %>),
           zoom: 10
         });
         
@@ -79,7 +79,7 @@
       <div class="col-xs-4"></div>
       <div class="col-xs-4 result-title">
         <!-- 검색된 역이름 가져와야 합니당 -->
-        <div class="station-title"><%= @station[0].station_name %></div>
+        <div class="station-title"><%= @station.station_name %></div>
       </div>
       <div class="col-xs-4"></div>
     </div>
@@ -87,15 +87,11 @@
     <div class="row vertical-align">
 	    <% @stores.each do |s| %>
 	      <div class="col-xs-4">
-    	    <div class="one-restaurant">
-    	        <div class="result-pick"></div>
-    	    </div>
-    	    <div class="row vertical-align restaurant-name">
-    	      <div class="col-xs-4 restaurant">
-    	        <a href="/home/restaurant_info"><%= s.store_name %></p>
-    	      </div>
-    	    </div>
-    	   </div>
+          <div class="result-pick"></div>
+          <div class="restaurant-name">
+            <a href="/list/findStoreInfo/<%= s.id %>"><%= s.store_name %></p>
+          </div>
+        </div>
       <% end %>
     </div>
     <!-- 여만큼이요 -->

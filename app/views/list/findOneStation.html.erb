@@ -8,9 +8,13 @@
       </div>
       <div class="col-xs-4"></div>
       <div class="col-xs-5 category">
-        <a href="#" class="first-menu">log in</a>
-        <a href="#" class="second-menu">contact us</a>
-        <a href="#" class="third-menu">menu</a>
+        <% if current_user == nil %>
+          <a href="/users/sign_in" class="first-menu">login</a>
+        <% else %>
+          <a href="/users/sign_out" class="first-menu">logout</a>  
+        <% end %>
+        <a href="/list/storeMypageEdit" class="second-menu">mypage</a>
+        <a href="/" class="third-menu">home</a>
       </div>
     </div>
   </div>
@@ -23,6 +27,7 @@
         <div class="head-line">
           <p class="first-header">집 앞, 학교 앞, 핫플레이스</p>
           <p class="second-header">실시간 음식점 좌석 현황</p>
+            <!-- 역 검색 -->
             <form action="/list/findStores" method="get">
               <div class="row vertical-align search">
                 <div class="col-xs-3"></div>
@@ -39,6 +44,7 @@
               <div class="col-xs-4"></div>
               </div>
             </form>
+            <!-- ./ 역 검색 -->
         </div>
       </div>
       <div class="col-xs-2"></div>

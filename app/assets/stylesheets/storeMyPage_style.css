@@ -1,0 +1,130 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+body {
+    margin: 0px;
+    font-family: 'Jeju Gothic', sans-serif;
+}
+
+nav {
+    margin-top: 70px;
+}
+
+.container-fluid {
+    width: 840px;
+    margin: auto;
+}
+
+nav:after {
+    content: "";
+    display: block;
+    width: 960px;
+    border-bottom: 1px solid #bcbcbc;
+    margin: 20px auto 0px auto;
+}
+
+
+/*------------index page------------*/
+/* navigator */
+
+nav .vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.category {
+    font-size: 13pt;
+    
+    display: inline;
+    float: right;
+}
+
+.logo {
+    font-size: 36pt;
+    font-weight: bold;
+    
+    display: inline;
+}
+
+.first-menu, .second-menu, .third-menu {
+    float: right;
+    display: inline;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* header */
+.mypage {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    
+    margin-top: 50px;
+}
+
+.mypage:after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 2px solid black;
+    margin: 20px auto 40px auto;
+}
+
+/* store-info */
+.btn-edit {
+    margin-left: 79.867px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center !important;
+    color: black !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    border: 0 !important; 
+    outline: 0 !important;
+    text-decoration: none !important;
+}
+
+.store-info .col-xs-2 {
+  text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.store-info input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.store-info .store_menu {
+  margin-top: 20px !important;
+}
+
+.store-info:after {
+    content: "";
+    display: block;
+    width: 960px;
+    border-bottom: 1px solid #bcbcbc;
+    margin: 20px auto 0px auto;
+}
+
+/* footer */
+
+footer .vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0px;
+}
