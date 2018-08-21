@@ -5,21 +5,21 @@
 ----------|----------|-------
 역 검색 & 메인 | GET | list/findOneStation
 역 검색 결과 | GET | list/findStores?search={station_name}
-- | - | -
+/ | / | /
 매장 등록 | GET | list/storeApply
 매장 등록 | POST | list/storeCreate
-- | - | -
+/ | / | /
 매장 정보 수정 | GET | list/storeMyPageEdit
 매장 정보 수정 | POST | list/storeMyPageUpdate
-- | - | -
+/ | / | /
 매장 정보 조회 | GET | list/findStoreInfo/{store_id}
 매장 후기 등록 | POST | store_comments/create/{store_id}
 매장 후기 삭제 | GET | store_comments/delete/{store_id}/{store_comment_id}
-- | - | -
+/ | / | /
 매장 좌석 수 조절 | GET | list/storeSeatInfo
 매장 자리 증가 | GET | list/storeSeatCountPlus
 매장 자리 감소 | GET | list/storeSeatCountMinus
-- | - | -
+/ | / | /
 
 
 
