@@ -2,9 +2,17 @@ class ListController < ApplicationController
 
   # 첫 페이지
   def findOneStation
-    if current_user != nil && Store.find_by(:user_id => current_user.id) == nil
+    if current_user != nil && current_user.permission == 2
+      redirect_to "/list/adminUser"
+    elsif current_user != nil && Store.find_by(:user_id => current_user.id) == nil
       redirect_to "/list/storeApply"
     end
+    
+    # if current_user != nil && Store.find_by(:user_id => current_user.id) == nil
+    #   redirect_to "/list/storeApply"
+    # elsif current_user.permission == 2 #이부분은 제가 만든거에요
+    #   redirect_to '/list/adminUser'#돌려볼게요 형 
+    # end
   end
   
   # 역 검색 결과
@@ -88,7 +96,6 @@ class ListController < ApplicationController
     @store.store_menu_img1 = uploader2.url
     @store.store_menu_img2 = uploader3.url
     @store.store_menu_img3 = uploader4.url
-    
     @store.store_information = params[:storeInformation]
     @store.store_contact = params[:storeContact]
     @store.store_group = params[:storeGroup]
@@ -98,6 +105,46 @@ class ListController < ApplicationController
     @store.save
     
     redirect_to "/list/findStoreInfo/#{@store.id}"
+  end
+  
+  # 자리를 증가시키는 액션
+  def storeSeatCountPlus
+     @store = Store.find_by(:user_id => current_user.id)
+     @store.store_seat_count += 1
+     @store.save
+     
+     redirect_to :back
+  end
+  
+  # 이게 자리 감소시키는 액션
+  def storeSeatCountMinus
+     @store = Store.find_by(:user_id => current_user.id)
+     @store.store_seat_count -= 1
+     @store.save
+     
+     redirect_to :back
+  end
+  
+  # 자리정보를 보여주는 액션 과 뷰
+  def storeSeatInfo
+    @store = Store.find_by(:user_id => current_user.id)
+  end
+  
+  def adminUser
+    if current_user.permission == 2
+      @store = Store.find_by(:user_id => current_user.id)
+      @stores = Store.all
+    else
+      redirect_to '/list/findOneStation'
+    end
+  end
+  
+  def userDestroy
+    @store = Store.find(params[:store_id])
+    @store.destroy
+    @store.user.destroy
+    
+    redirect_to :back
   end
   
 end

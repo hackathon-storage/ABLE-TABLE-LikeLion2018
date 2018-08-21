@@ -402,7 +402,7 @@ nav a {
 /* detail-info */
 
 .detail-info {
-  margin: 50px 0px 0px 0px;
+  margin: 50px 0px 50px 0px;
 }
 
 .first-info {
@@ -498,10 +498,20 @@ nav a {
   font-size: 18px;
 }
 
-.detail-info:after {
+/* store-comments */
+
+.store-comments:after {
         content: "";
         display: block;
         width: 960px;
         border-bottom: 1px solid #bcbcbc;
         margin: 50px auto 0px auto;
+}
+
+.input-comment {
+  text-align: center;
+}
+
+.input-comment .col-xs-2{
+  float: left;
 }

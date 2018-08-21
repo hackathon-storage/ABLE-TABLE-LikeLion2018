@@ -112,3 +112,26 @@
     </div>
   </div>
 </div>
+<div class="store-comments">
+  <div class="container-fluid">
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-8">
+        <% @store.store_comments.each do |comment| %>
+          익명 댓글 : <%= comment.content%> <a href ='/store_comments/delete/<%= @store.id  %>/<%= comment.id %>'> 삭제 </a><br>
+        <%end%>
+        <form action='/store_comments/create/<%= @store.id%>' method ='post'>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <div class="row vertical-align input-comment">
+            <div class="col-xs-10">
+              <input type = 'textarea' name = 'storeComment' class="form-control" placeholder = '댓글을 남겨주세요 ....'>
+            </div>
+            <div class="col-xs-2">
+              <button type='submit' class= 'btn btn-outline-primary'>제출</button>
+            </div>
+          </div>
+        </form>
+      <div class="col-xs-2"></div>
+    </div>
+  </div>
+</div>
