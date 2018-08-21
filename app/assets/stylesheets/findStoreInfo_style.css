@@ -402,7 +402,7 @@ nav a {
 /* detail-info */
 
 .detail-info {
-  margin: 50px 0px 50px 0px;
+  margin: 50px 0px 0px 0px;
 }
 
 .first-info {
@@ -500,6 +500,25 @@ nav a {
 
 /* store-comments */
 
+.comment-box {
+  
+}
+
+.comment-start {
+  font-size: 18px;
+  text-align: center;
+  
+  margin-top: 50px;
+}
+
+.comment-start:after {
+        content: "";
+        display: block;
+        width: 50px;
+        border-bottom: 1px solid black;
+        margin: 20px auto 20px auto;
+}
+
 .store-comments:after {
         content: "";
         display: block;
@@ -514,4 +533,8 @@ nav a {
 
 .input-comment .col-xs-2{
   float: left;
+}
+
+.comments-list {
+  margin: 50px 0px 0px 0px;
 }

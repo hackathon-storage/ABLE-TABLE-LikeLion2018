@@ -10,6 +10,7 @@
       <div class="col-xs-4"></div>
   </div>
 </header>
+
 <form action = '/list/storeMypageUpdate' method='post' enctype='multipart/form-data'>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 <div class="container-fluid">
@@ -22,6 +23,7 @@
       </div>
       <div class="col-xs-2"></div>
     </div>
+    
     <div class="row vertical-align">
       <div class="col-xs-2"></div>
       <div class="col-xs-2 store-infomation">매장 소개</div>
@@ -30,6 +32,7 @@
       </div>
       <div class="col-xs-2"></div>
     </div>
+    
     <div class="row vertical-align">
       <div class="col-xs-2"></div>
       <div class="col-xs-2 store-address">매장 주소</div>
@@ -38,6 +41,7 @@
       </div>
       <div class="col-xs-2"></div>
     </div>
+    
     <div class="row vertical-align">
       <div class="col-xs-2"></div>
       <div class="col-xs-2 store-img">대표 이미지</div>
@@ -46,6 +50,7 @@
       </div>
       <div class="col-xs-2"></div>
     </div>
+    
     <div class="row vertical-align">
       <div class="col-xs-2"></div>
       <div class="col-xs-2 store-menu">매장 내부<br>메뉴판 이미지</div>
@@ -56,6 +61,7 @@
       </div>
       <div class="col-xs-2"></div>
     </div>
+    
     <div class="row vertical-align">
       <div class="col-xs-2"></div>
       <div class="col-xs-2 store-group">단체석 규모</div>
@@ -64,6 +70,7 @@
       </div>
       <div class="col-xs-2"></div>
     </div>
+    
     <div class="row vertical-align">
       <div class="col-xs-2"></div>
       <div class="col-xs-2 store-contact">매장 전화번호</div>
@@ -72,6 +79,16 @@
       </div>
       <div class="col-xs-2"></div>
     </div>
+    
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-2 store-contact">가게 전체 좌석수</div>
+      <div class="col-xs-6">
+        <input type='text' name='storeSeatTotal' class="form-control store_contact" value="<%= @store.store_seat_total %>" placeholder="매장의 총 좌석수를 입력해주세요"/>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    
     <div class="row vertical-align">
       <div class="col-xs-2"></div>
       <div class="col-xs-2 store-contact">지하철 역 등록</div>
@@ -84,13 +101,14 @@
       </div>
       <div class="col-xs-2"></div>
     </div>
-  <div class="row vertical-align">
-      <div class="col-xs-4"></div>
-      <div class="col-xs-4">
-        <button type="submit" class="btn btn-edit">수정하기</button>
+    
+    <div class="row vertical-align">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-edit">수정하기</button>
+        </div>
+        <div class="col-xs-4"></div>
       </div>
-      <div class="col-xs-4"></div>
     </div>
   </div>
-</div>
 </form>

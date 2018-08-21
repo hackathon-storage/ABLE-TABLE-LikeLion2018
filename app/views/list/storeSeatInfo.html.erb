@@ -1,7 +1,5 @@
-
-<h2>전체 가게 자리 갯수 : </h2><%= @store.store_seat_total %> / <%= @store.store_seat_count%><br>
-
-<h2>자리 1 증가시켜주기</h2>
-<a href='/list/storeSeatCountPlus'>+1</a><br>
-<h2>자리 1 감소시켜주기</h2>
-<a href='/list/storeSeatCountMinus'>-1</a>
+<div class="text-center">
+  <h2>전체 가게 자리 갯수 : <%= @store.store_seat_count %> / <%= @store.store_seat_total %></h2>
+  <h2><a href="/list/storeSeatCountPlus">자리 1 증가시켜주기</a></h2>
+  <h2><a href="/list/storeSeatCountMinus">자리 1 감소시켜주기</a></h2>
+</div>

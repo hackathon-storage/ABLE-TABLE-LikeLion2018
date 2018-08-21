@@ -113,13 +113,15 @@
   </div>
 </div>
 <div class="store-comments">
-  <div class="container-fluid">
+  <div class="container-fluid comment-box">
+    <div class="row vertical-align">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6 comment-start">여러분의 후기를 등록해주세요!</div>
+      <div class="col-xs-3"></div>
+    </div>
     <div class="row vertical-align">
       <div class="col-xs-2"></div>
       <div class="col-xs-8">
-        <% @store.store_comments.each do |comment| %>
-          익명 댓글 : <%= comment.content%> <a href ='/store_comments/delete/<%= @store.id  %>/<%= comment.id %>'> 삭제 </a><br>
-        <%end%>
         <form action='/store_comments/create/<%= @store.id%>' method ='post'>
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
           <div class="row vertical-align input-comment">
@@ -132,6 +134,14 @@
           </div>
         </form>
       <div class="col-xs-2"></div>
+      </div>
+    </div>
+    <div class="row vertical-align comments-list">
+      <% @store.store_comments.each do |comment| %>
+        <div class="col-xs-4">
+        익명 댓글 : <%= comment.content%> <a href ='/store_comments/delete/<%= @store.id  %>/<%= comment.id %>'> 삭제 </a><br>
+        </div>
+      <%end%>
     </div>
   </div>
 </div>

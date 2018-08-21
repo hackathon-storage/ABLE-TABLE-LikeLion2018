@@ -12,7 +12,7 @@ class CreateStores < ActiveRecord::Migration[5.0]
       t.string :store_information
       t.string :store_contact
       t.integer :store_group
-      t.integer :store_seat_count
+      t.integer :store_seat_count, default: 0
       t.integer :store_seat_total
       t.string :store_address
       

@@ -13,7 +13,6 @@ class StoreCommentsController < ApplicationController
     @store_comment = StoreComment.find(params[:store_comment_id])
     @store_comment.destroy
     
-  
     redirect_to "/list/findStoreInfo/#{@store.id}"
   end
 end
