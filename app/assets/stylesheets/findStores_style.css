@@ -94,7 +94,8 @@ header .map-api {
         margin: 20px auto 40px auto;
 }
 
-.result-pick {
+.result-pick img {
+    display: block;
     width: 220px;
     height: 360px;
     

@@ -9,10 +9,11 @@ class StoreCommentsController < ApplicationController
   end
 
   def delete
-    @store = Store.find(params[:store_id])
-    @store_comment = StoreComment.find(params[:store_comment_id])
-    @store_comment.destroy
-    
+    if current_user != nil && current_user.permission == 2
+      @store = Store.find(params[:store_id])
+      @store_comment = StoreComment.find(params[:store_comment_id])
+      @store_comment.destroy
+    end
     redirect_to "/list/findStoreInfo/#{@store.id}"
   end
 end

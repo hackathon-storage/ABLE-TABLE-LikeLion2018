@@ -20,56 +20,65 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <ul class="carousel my-carousel carousel--thumb">
-      <input class="carousel__activator" type="radio" id="K" name="thumb" checked="checked"/>
-      <input class="carousel__activator" type="radio" id="L" name="thumb"/>
-      <input class="carousel__activator" type="radio" id="M" name="thumb"/>
-      <input class="carousel__activator" type="radio" id="N" name="thumb"/>
-      <input class="carousel__activator" type="radio" id="O" name="thumb"/>
-      <div class="carousel__controls">
-        <label class="carousel__control carousel__control--backward" for="O"></label>
-        <label class="carousel__control carousel__control--forward" for="L"></label>
+  <!--<div class="container-fluid">-->
+  <!--  <ul class="carousel my-carousel carousel--thumb">-->
+  <!--    <input class="carousel__activator" type="radio" id="K" name="thumb" checked="checked"/>-->
+  <!--    <input class="carousel__activator" type="radio" id="L" name="thumb"/>-->
+  <!--    <input class="carousel__activator" type="radio" id="M" name="thumb"/>-->
+  <!--    <input class="carousel__activator" type="radio" id="N" name="thumb"/>-->
+  <!--    <input class="carousel__activator" type="radio" id="O" name="thumb"/>-->
+  <!--    <div class="carousel__controls">-->
+  <!--      <label class="carousel__control carousel__control--backward" for="O"></label>-->
+  <!--      <label class="carousel__control carousel__control--forward" for="L"></label>-->
+  <!--    </div>-->
+  <!--    <div class="carousel__controls">-->
+  <!--      <label class="carousel__control carousel__control--backward" for="K"></label>-->
+  <!--      <label class="carousel__control carousel__control--forward" for="M"></label>-->
+  <!--    </div>-->
+  <!--    <div class="carousel__controls">-->
+  <!--      <label class="carousel__control carousel__control--backward" for="L"></label>-->
+  <!--      <label class="carousel__control carousel__control--forward" for="N"></label>-->
+  <!--    </div>-->
+  <!--    <div class="carousel__controls">-->
+  <!--      <label class="carousel__control carousel__control--backward" for="M"></label>-->
+  <!--      <label class="carousel__control carousel__control--forward" for="O"></label>-->
+  <!--    </div>-->
+  <!--    <div class="carousel__controls">-->
+  <!--      <label class="carousel__control carousel__control--backward" for="N"></label>-->
+  <!--      <label class="carousel__control carousel__control--forward" for="K"></label>-->
+  <!--    </div>-->
+  <!--    <li class="carousel__slide">-->
+  <!--      <h1>K</h1>-->
+  <!--    </li>-->
+  <!--    <li class="carousel__slide">-->
+  <!--      <h1>L</h1>-->
+  <!--    </li>-->
+  <!--    <li class="carousel__slide">-->
+  <!--      <h1>M</h1>-->
+  <!--    </li>-->
+  <!--    <li class="carousel__slide">-->
+  <!--      <h1>N</h1>-->
+  <!--    </li>-->
+  <!--    <li class="carousel__slide">-->
+  <!--      <h1>O</h1>-->
+  <!--    </li>-->
+  <!--    <div class="carousel__indicators">-->
+  <!--      <label class="carousel__indicator" for="K"></label>-->
+  <!--      <label class="carousel__indicator" for="L"></label>-->
+  <!--      <label class="carousel__indicator" for="M"></label>-->
+  <!--      <label class="carousel__indicator" for="N"></label>-->
+  <!--      <label class="carousel__indicator" for="O"></label>-->
+  <!--    </div>-->
+  <!--  </ul>-->
+  <!--</div>-->
+  <div class="store-images">
+    <div class="container-fluid">
+      <div class="row vertical-align">
+        <div class="col-xs-4"><img src="<%= @store.store_menu_img1 %>"></div>
+        <div class="col-xs-4"><img src="<%= @store.store_menu_img2 %>"></div>
+        <div class="col-xs-4"><img src="<%= @store.store_menu_img3 %>"></div>
       </div>
-      <div class="carousel__controls">
-        <label class="carousel__control carousel__control--backward" for="K"></label>
-        <label class="carousel__control carousel__control--forward" for="M"></label>
-      </div>
-      <div class="carousel__controls">
-        <label class="carousel__control carousel__control--backward" for="L"></label>
-        <label class="carousel__control carousel__control--forward" for="N"></label>
-      </div>
-      <div class="carousel__controls">
-        <label class="carousel__control carousel__control--backward" for="M"></label>
-        <label class="carousel__control carousel__control--forward" for="O"></label>
-      </div>
-      <div class="carousel__controls">
-        <label class="carousel__control carousel__control--backward" for="N"></label>
-        <label class="carousel__control carousel__control--forward" for="K"></label>
-      </div>
-      <li class="carousel__slide">
-        <h1>K</h1>
-      </li>
-      <li class="carousel__slide">
-        <h1>L</h1>
-      </li>
-      <li class="carousel__slide">
-        <h1>M</h1>
-      </li>
-      <li class="carousel__slide">
-        <h1>N</h1>
-      </li>
-      <li class="carousel__slide">
-        <h1>O</h1>
-      </li>
-      <div class="carousel__indicators">
-        <label class="carousel__indicator" for="K"></label>
-        <label class="carousel__indicator" for="L"></label>
-        <label class="carousel__indicator" for="M"></label>
-        <label class="carousel__indicator" for="N"></label>
-        <label class="carousel__indicator" for="O"></label>
-      </div>
-    </ul>
+    </div>
   </div>
 </header>
 <div class="detail-info">
@@ -89,9 +98,9 @@
       <div class="col-xs-4">
         <div class="first-info">
           <div class="row vertical-align">
-            <div class="col-xs-4 remain-seats">2</div>
+            <div class="col-xs-4 remain-seats"><%= @store.store_seat_count %></div>
             <div class="col-xs-4 partition">/</div>
-            <div class="col-xs-4 total-seats">10</div>
+            <div class="col-xs-4 total-seats"><%= @store.store_seat_total %></div>
           </div>
         </div>
       </div>
@@ -139,7 +148,10 @@
     <div class="row vertical-align comments-list">
       <% @store.store_comments.each do |comment| %>
         <div class="col-xs-4">
-        익명 댓글 : <%= comment.content%> <a href ='/store_comments/delete/<%= @store.id  %>/<%= comment.id %>'> 삭제 </a><br>
+          익명 댓글 : <%= comment.content%>
+          <% if current_user != nil && current_user.permission == 2 %>
+            <a href ='/store_comments/delete/<%= @store.id  %>/<%= comment.id %>'>삭제</a>
+          <% end %>
         </div>
       <%end%>
     </div>
