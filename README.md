@@ -1,9 +1,8 @@
 # 2018 LikeLion Central Hackathon
 
 ## API Manual
-
 요청 방식 | 요청 url | 설명
------------------------------
+----------|----------|-------
 첫 페이지 | get | list/findOneStation
 
 
