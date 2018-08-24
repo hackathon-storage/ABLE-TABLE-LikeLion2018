@@ -1,5 +1,33 @@
-<div class="text-center">
-  <h2>전체 가게 자리 갯수 : <%= @store.store_seat_count %> / <%= @store.store_seat_total %></h2>
-  <h2><a href="/list/storeSeatCountPlus">자리 1 증가시켜주기</a></h2>
-  <h2><a href="/list/storeSeatCountMinus">자리 1 감소시켜주기</a></h2>
+<link rel="stylesheet" type="text/css" href="/assets/storeSeatInfo_style.css">
+
+<header>
+  <div class="container-fluid">
+    <div class="row vertical-align">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4">
+        <div class="mypage">매장좌석관리</div>
+      </div>
+      <div class="col-xs-4"></div>
+  </div>
+</header>
+<div class="seat-control">
+  <div class="container-fluid">
+    <div class="seat-status">
+      전체 가게 자리 갯수 : <%= @store.store_seat_count %> / <%= @store.store_seat_total %>
+    </div>
+    <div class="row vertical-align">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-4">
+        <div class="seat-plus">
+          <a href="/list/storeSeatCountPlus">자리 1<br>증가시켜주기</a>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="seat-minus">
+          <a href="/list/storeSeatCountMinus">자리 1<br>감소시켜주기</a>
+        </div>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+  </div>
 </div>

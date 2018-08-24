@@ -1,17 +1,32 @@
-<div class="text-center">
-  <h2>Log in</h2>
-  
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-inputs">
-      <%= f.input :email, label: false, required: false, autofocus: true, placeholder: "ID를 입력하세요." %>
-      <%= f.input :password, label: false, required: false, placeholder: "PW를 입력하세요." %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<link rel="stylesheet" type="text/css" href="/assets/login_style.css">
+
+<header>
+  <div class="container-fluid">
+    <div class="row vertical-align">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4">
+        <div class="mypage">Login</div>
+      </div>
+      <div class="col-xs-4"></div>
+  </div>
+</header>
+<div class="login-box">
+  <div class="container-fluid">
+    <div class="text-center">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email, label: false, required: false, autofocus: true, class: "form-control", placeholder: "ID를 입력하세요." %>
+          <%= f.input :password, label: false, required: false, class: "form-control", placeholder: "PW를 입력하세요." %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+      
+        <div class="form-actions">
+          <%= f.button :submit, "Log in", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    
+    <%= render "devise/shared/links" %>
+    
     </div>
-  
-    <div class="form-actions">
-      <%= f.button :submit, "Log in", class: "btn btn-primary" %>
-    </div>
-  <% end %>
-  
-  <%= render "devise/shared/links" %>
+  </div>
 </div>

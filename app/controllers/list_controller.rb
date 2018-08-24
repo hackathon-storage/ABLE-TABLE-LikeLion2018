@@ -2,9 +2,9 @@ class ListController < ApplicationController
 
   # 첫 페이지 + 역 검색
   def findOneStation
-    if current_user != nil && current_user.permission == 2
-      redirect_to "/list/adminUser"
-    elsif current_user != nil && Store.find_by(:user_id => current_user.id) == nil
+    # if current_user != nil && current_user.permission == 2
+    #   redirect_to "/list/adminUser"
+    if current_user != nil && Store.find_by(:user_id => current_user.id) == nil && current_user.permission != 2
       redirect_to "/list/storeApply"
     end
   end

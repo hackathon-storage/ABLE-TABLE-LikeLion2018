@@ -1,0 +1,137 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+body {
+    margin: 0px;
+    font-family: 'Jeju Gothic', sans-serif;
+}
+
+nav {
+    margin-top: 70px;
+}
+
+.container-fluid {
+    width: 840px;
+    margin: auto;
+}
+
+nav:after {
+        content: "";
+        display: block;
+        width: 960px;
+        border-bottom: 1px solid #bcbcbc;
+        margin: 20px auto 0px auto;
+}
+
+
+/*------------index page------------*/
+/* navigator */
+
+nav .vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.category {
+    font-size: 13pt;
+    
+    display: inline;
+    float: right;
+}
+
+.logo {
+    font-size: 36pt;
+    font-weight: bold;
+    
+    display: inline;
+}
+
+.first-menu, .second-menu, .third-menu {
+    float: right;
+    display: inline;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* header */
+.mypage {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    
+    margin-top: 50px;
+}
+
+.mypage:after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 2px solid black;
+    margin: 20px auto 40px auto;
+}
+
+.seat-control:after {
+    content: "";
+    display: block;
+    width: 960px;
+    border-bottom: 1px solid #bcbcbc;
+    margin: 50px auto 0px auto;
+}
+
+.seat-status {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  
+  margin-bottom: 20px;
+}
+
+.seat-plus, .seat-minus {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.seat-control a {
+  display: inline-block;
+  margin-top: 85px;
+}
+
+.seat-plus {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    
+    background-color: #AEE6AB;
+}
+
+.seat-minus {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    
+    background-color: #F67E4D;
+}
+
+/* footer */
+
+footer .vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0px;
+}

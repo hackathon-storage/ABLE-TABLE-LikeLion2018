@@ -1,6 +1,32 @@
-<% @stores.each do |store| %>
-  가게 이름 : <%= store.store_name%> /가게 Use ID :  <%= store.user_id %> /가게 위치 : <%= store.store_address%>
-  <a href='/list/userDestroy/<%= store.id %>'>매장삭제</a><br>
-<%end%>
-  
-  
+<link rel="stylesheet" type="text/css" href="/assets/adminUser_style.css">
+
+<header>
+  <div class="container-fluid">
+    <div class="row vertical-align">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4">
+        <div class="mypage">계정 목록</div>
+      </div>
+      <div class="col-xs-4"></div>
+  </div>
+</header>
+<div class="user-table">
+  <div class="container-fluid">
+    <table>
+      <tr>
+        <th>User ID</th>
+        <th>가게 이름</th>
+        <th>가게 위치</th>
+        <th>--</th>
+      </tr>
+      <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.user_id %></td>
+        <td><%= store.store_name%></td>
+        <td><%= store.store_address%></td>
+        <td><a href='/list/userDestroy/<%= store.id %>'>매장삭제</a></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

@@ -29,7 +29,15 @@
           <% else %>
             <a href="/users/sign_out" class="first-menu">logout</a>  
           <% end %>
-          <a href="/list/storeMypageEdit" class="second-menu">mypage</a>
+          <% if current_user != nil && current_user.permission != 2 %>
+            <a href="/list/storeMypageEdit" class="second-menu">mypage</a>
+          <% end %>
+          <% if current_user != nil && current_user.permission == 1 %>
+            <a href="/list/storeSeatInfo" class="second-menu">매장좌석관리</a>
+          <% end %>
+          <% if current_user != nil && current_user.permission == 2 %>
+            <a href="/list/adminUser" class="second-menu">계정목록</a></a>
+          <% end %>
         </div>
       </div>
     </div>

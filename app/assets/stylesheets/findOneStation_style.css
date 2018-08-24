@@ -189,6 +189,21 @@ header .row .vertical-align .search {
     margin: auto;
 }
 
+.first-member {
+    background-image: url("서지용.jpg");
+    background-size: cover;
+}
+
+.second-member {
+    background-image: url("조민국.png");
+    background-size: cover;
+}
+
+.third-member {
+    background-image: url("이서영.jpg");
+    background-size: cover;
+}
+
 .member-name {
     text-align: center;
     font-size: 24px;
