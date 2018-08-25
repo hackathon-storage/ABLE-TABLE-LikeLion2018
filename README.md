@@ -1,4 +1,4 @@
-# 2018 LikeLion Central Hackathon
+# 2018 LikeLion Central Hackathon (2018/08/24 ~ 2018/08/25)
 
 ## API Manual
 설명 | 요청 방식 | 요쳥 url
@@ -22,11 +22,10 @@
 / | / | /
 
 
-### Author
-서지용(backend)
- Controller | 요청 방식 |
-----------|-----------------
-1. list 
+### 서지용 정리
+Controller & Action | 요청 방식
+-----------|-----------
+list_controller | /
 findOneStation | 지하철역을 입력받는 index뷰
 findStores | 입력받은 지하철 역 근처의 매장 위치와 목록들을 보여주는  액션
 findStoreInfo | 등록한 매장정보를 USER들이 볼 수 있도록 서비스를 제공 해주는 액션
@@ -39,22 +38,21 @@ storeSeatCountMinus | 매장의 자릿수를 1감소 시켜주는 액션
 storeSeatInfo | 매장의 자릿수 정보를 보여줄 수 있도록 하는 액션
 adminUser | Admin계정을 로그인 시 매장과 USER를 삭제 할 수 잇도록 하는 액션 
 userDestroy | Admin계정으로 매장과 User을 삭제하는 액션 
-/ | / | 
-2. store_comments
+store_comments_controller | /
 create | 특정 매장의댓글 생성하는 액션 
 delete |특정 매장의 댓글 삭제하는 액션
-/ | / | 
- DB | 설명 |
-----------|-----------------
-1. Users |사용자들의 계정 DB
-2. Staions | 지하철역 정보 DB
-3. Stores | 매장의 정보 DB
-4. StoreComments | 특정 매장의 댓글 DB
-* 
-* 
-* 
-* 이서영
-* 조민국
+
+DB | 설명
+---|------
+Users |사용자들의 계정 DB
+Staions | 지하철역 정보 DB
+Stores | 매장의 정보 DB
+StoreComments | 특정 매장의 댓글 DB
+
+### Author
+* 서지용 - BE
+* 이서영 - FE
+* 조민국 - Assist [MinGOODdev](https://github.com/MinGOODdev)
 
 ### Development Environment
 
