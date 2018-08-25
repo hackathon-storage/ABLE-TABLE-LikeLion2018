@@ -1,6 +1,9 @@
 # 2018 LikeLion Central Hackathon (2018/08/24 ~ 2018/08/25)
-[ABLE TABLE 아이디어 제안서](/docs/Ideathon_ABLE_TABLE.pdf)
+* [ABLE TABLE 아이디어 제안서](/docs/Ideathon_ABLE_TABLE.pdf)
+
 ![ABLE_TABLE](/docs/ABLETABLE.png)
+
+---
 
 ## API Manual
 설명 | 요청 방식 | 요쳥 url
