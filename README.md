@@ -20,7 +20,12 @@
 매장 자리 증가 | GET | list/storeSeatCountPlus
 매장 자리 감소 | GET | list/storeSeatCountMinus
 / | / | /
+사용자 관리 | GET | list/adminUser
+사용자(매장) 삭제 | GET | list/userDestroy/{store_id}
+댓글 생성 | POST | store_comments/create/{store_id}
+댓글 삭제 | GET | store_comments/delete/{store_id}/{store_comment_id}
 
+---
 
 ### 서지용 정리
 Controller & Action | 요청 방식
@@ -45,14 +50,16 @@ delete |특정 매장의 댓글 삭제하는 액션
 DB | 설명
 ---|------
 Users |사용자들의 계정 DB
-Staions | 지하철역 정보 DB
+Stations | 지하철역 정보 DB
 Stores | 매장의 정보 DB
 StoreComments | 특정 매장의 댓글 DB
+
+---
 
 ### Author
 * 서지용 - BE
 * 이서영 - FE
-* 조민국 - Assist [MinGOODdev](https://github.com/MinGOODdev)
+* [MinGOODdev](https://github.com/MinGOODdev) - Assist
 
 ### Development Environment
 
